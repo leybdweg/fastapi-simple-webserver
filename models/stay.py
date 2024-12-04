@@ -1,3 +1,4 @@
+import uuid
 from typing import Dict
 
 from pydantic import BaseModel
@@ -8,6 +9,7 @@ class ProviderData(BaseModel):
 
 
 class Stay(BaseModel):
+    request_id: str | None = uuid.uuid4()
     ski_site: int
     from_date: str
     to_date: str
