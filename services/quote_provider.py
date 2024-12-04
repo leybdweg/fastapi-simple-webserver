@@ -9,10 +9,9 @@ class QuoteProvider:
     def __init__(self, first_provider: FirstProvider):
         self.first_provider = first_provider
 
-    def fetch_quote(self, provider: str, stay: Stay) -> Any:
+    async def fetch_quote(self, provider: str, stay: Stay) -> Any:
         match provider:
-            case 'first_provider':
-                return self.first_provider.fetch_quote(stay)
-            case _:
-                raise ValueError(f'Unknown provider: {provider}')
-
+            case 'first':
+                return await self.first_provider.fetch_quote(stay)
+            case _:  # in real life, this should throw error
+                print(f'Unknown provider: {provider}')

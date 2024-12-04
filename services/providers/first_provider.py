@@ -8,5 +8,5 @@ class FirstProvider:
         # check connection
         pass
 
-    def fetch_quote(self, stay: Stay) -> Any:
+    async def fetch_quote(self, stay: Stay) -> Any:
         return {'aa': 123}
