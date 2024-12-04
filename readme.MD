@@ -1,3 +1,9 @@
+# idea here
+
+### try out fast-api with regular web develop ideas
+- basic endpoints (create and fetch)
+- background flows (quotes update)
+
 # next steps
 
 - connect ProviderOne to some mock api
