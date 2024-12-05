@@ -37,7 +37,7 @@ class AvailableStaysService:
 
     async def update_quotes(self):
         for offer in self.available_stays_offers:
-            for provider in self.providers:
+            for provider in self.providers:  # TODO: gather all Futures and do single await
                 if not offer.provider_datas.get(provider, False):
                     quote = await self.quoteProvider.fetch_quote(provider, offer)
                     offer.provider_datas[provider] = quote
