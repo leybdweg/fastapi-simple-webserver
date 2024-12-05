@@ -20,7 +20,7 @@ services:
 
   mongodb:
     image: mongo:latest
-    container_name: mongodb-container
+    container_name: mongodb-container-sws
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: adminpassword
