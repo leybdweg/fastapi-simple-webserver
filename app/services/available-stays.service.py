@@ -1,4 +1,4 @@
-from models.stay import Stay
+from app.models.stay import Stay
 
 
 class AvailableStaysService:

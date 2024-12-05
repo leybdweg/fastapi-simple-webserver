@@ -1,7 +1,7 @@
 from typing import Any
 
-from models.stay import Stay
-from services.providers.first_provider import FirstProvider
+from app.models.stay import Stay
+from app.services.providers.first_provider import FirstProvider
 
 
 class QuoteProvider:

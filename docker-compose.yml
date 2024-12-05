@@ -1,0 +1,33 @@
+services:
+  simple-web-server:
+    develop:
+      watch:
+        - path: app/
+          action: sync
+          target: /app
+        - path: requirements.txt
+          action: rebuild
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8001"  # Map the container's port 8000 to the host's port 8001
+    volumes:
+      - ./data:/data  # Mount a volume for persistent data if needed
+    environment:
+      - DEBIAN_FRONTEND=noninteractive
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb-container
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: adminpassword
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

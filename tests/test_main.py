@@ -1,8 +1,8 @@
 import pytest
 from httpx import AsyncClient, ASGITransport
 
-from di import availableStays
-from models.stay import Stay
+from app.di import availableStays
+from app.models.stay import Stay
 
 from fastapi.testclient import TestClient
 

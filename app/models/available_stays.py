@@ -2,8 +2,8 @@ import asyncio
 import uuid
 from typing import List
 
-from models.stay import Stay
-from services.quote_provider import QuoteProvider
+from app.models.stay import Stay
+from app.services.quote_provider import QuoteProvider
 
 
 class AvailableStaysService:

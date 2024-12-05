@@ -5,7 +5,8 @@
 - background flows (quotes update)
 
 # how to run app
--`fastapi dev main`
+- manually: `fastapi dev main` (db is on you)
+- docker: ```docker compose up --no-deps --watch```
 
 # how to run tests
 - `cd tests`
