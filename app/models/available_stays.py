@@ -16,7 +16,6 @@ class AvailableStaysService:
         self.quoteProvider = quote_provider
 
     def set_stay(self, stay: Stay) -> Stay:
-        stay.request_id = uuid.uuid4()
         self.available_stays_offers.append(stay)
 
         return stay

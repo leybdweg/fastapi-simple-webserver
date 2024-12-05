@@ -9,7 +9,7 @@ class ProviderData(BaseModel):
 
 
 class Stay(BaseModel):
-    request_id: str | None = uuid.uuid4()
+    request_id: str = str(uuid.uuid4())
     ski_site: int
     from_date: str
     to_date: str

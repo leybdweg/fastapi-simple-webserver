@@ -19,7 +19,6 @@ client = TestClient(app)
 
 
 class TestSearchAPI:
-    request_id = ""
 
     def setup_method(self):
         stay = Stay(

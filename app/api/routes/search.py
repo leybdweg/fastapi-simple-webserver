@@ -20,6 +20,6 @@ async def get_search(request_id: str) -> Stay | None:
 
 
 @router.post("")
-async def createSearch(body: Stay) -> str:
+async def createSearch(body: Stay) -> Stay:
     stay = availableStays.set_stay(body)
-    return str(stay.request_id)
+    return stay
