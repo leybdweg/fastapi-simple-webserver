@@ -22,7 +22,7 @@ class AvailableStaysService:
         return stay
 
     def get_stay_by_request_id(self, request_id: str) -> Stay | None:
-        offer_found = next((offer for offer in self.available_stays_offers if offer['request_id'] == request_id),
+        offer_found = next((stay for stay in self.available_stays_offers if stay.request_id == request_id),
                            None)
 
         return offer_found
