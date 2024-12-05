@@ -2,8 +2,8 @@ import asyncio
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
-from api.routes.main import api_router
-from di import availableStays
+from app.api.routes.main import api_router
+from app.di import availableStays
 
 
 @asynccontextmanager

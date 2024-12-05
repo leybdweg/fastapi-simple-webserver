@@ -1,6 +1,6 @@
 from typing import Any
 
-from models.stay import Stay
+from app.models.stay import Stay
 
 
 class FirstProvider:

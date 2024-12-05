@@ -1,8 +1,8 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 from pydantic import BaseModel
 
-from di import availableStays
-from models.stay import Stay
+from app.di import availableStays
+from app.models.stay import Stay
 
 # quote
 router = APIRouter()
