@@ -1,15 +1,8 @@
-# import sys
-# import os
-
 import pytest
 from httpx import AsyncClient, ASGITransport
 
 from di import availableStays
 from models.stay import Stay
-
-# FIXME: it doesnt work otherise ( ModuleNotFoundError: No module named 'main')
-# Add the parent directory to the Python path
-# sys.path.append(os.path.dirname(os.path.abspath(__file__)) + "/..")
 
 from fastapi.testclient import TestClient
 

@@ -4,11 +4,17 @@
 - basic endpoints (create and fetch)
 - background flows (quotes update)
 
+# how to run app
+-`fastapi dev main`
+
+# how to run tests
+- `cd tests`
+- `PYTHONPATH=.. pytest`
+
 # next steps
 
 - connect ProviderOne to some mock api
 - connect to some db, probably mongo
-- tests coverage
 
 
 
