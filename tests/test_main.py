@@ -51,9 +51,11 @@ class TestSearchAPI:
             }
             response = await ac.post("/search", json=body)
         output = response.json()
-        print('rrequestId', output)
-        assert isinstance(output, str)
-        self.request_id = output
+        assert isinstance(output['request_id'], str) # TODO: check if it's uuid format?
+        expected_output = {'ski_site': 2, 'from_date': '09-10-2030', 'to_date': '12-10-2030', 'group_size': 5, 'provider_datas': {}}
+        testable_output = {**output}
+        del testable_output['request_id'] # dynamic value, cant be easily tested
+        assert testable_output == expected_output
 
     @pytest.mark.anyio
     async def test_found_search(self):

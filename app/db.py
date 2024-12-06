@@ -1,3 +1,5 @@
+import os
+
 import pymongo
 
 client = pymongo.AsyncMongoClient(
@@ -7,4 +9,11 @@ client = pymongo.AsyncMongoClient(
     password="adminpassword",  # FIXME: in production it should com from ENVs
 )
 
-reserverDb = client.reserver
+db_name = ''
+match os.environ.get('ENV', 'development'):
+    case 'TEST':
+        db_name = 'reserver_test'
+    case _:
+        db_name = 'reserver'
+
+reserverDb = client[db_name]
