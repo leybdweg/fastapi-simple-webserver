@@ -14,12 +14,11 @@ class CreateSearchResponse(BaseModel):
 
 @router.get("")
 async def get_search(request_id: str) -> Stay | None:
-    foundStay = availableStays.get_stay_by_request_id(request_id)
-    print('get_search', request_id, foundStay)
+    foundStay = await availableStays.get_stay_by_request_id(request_id)
     return foundStay
 
 
 @router.post("")
 async def createSearch(body: Stay) -> Stay:
-    stay = availableStays.set_stay(body)
+    stay = await availableStays.set_stay(body)
     return stay
