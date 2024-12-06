@@ -11,11 +11,12 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8001"  # Map the container's port 8000 to the host's port 8001
+      - "8000:8000"  # Map the container's port 8000 to the host's port 8001
     volumes:
       - ./data:/data  # Mount a volume for persistent data if needed
     environment:
       - DEBIAN_FRONTEND=noninteractive
+      - ENV=development
     restart: unless-stopped
 
   mongodb:
