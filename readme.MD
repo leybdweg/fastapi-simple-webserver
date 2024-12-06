@@ -8,8 +8,12 @@
 
 # how to run app
 - manually: `fastapi dev main` (db is available on docker as well)
-- docker: ```docker compose up --no-deps --watch```
+- docker: ```docker compose up --no-deps --watch``` **
 
 # how to run tests (tests connect to db as well)
 - `cd tests`
 - `PYTHONPATH=.. pytest`
+
+
+# TODO
+- it seems server & mongo arent running together inside docker (cant connect and get to timeout)
