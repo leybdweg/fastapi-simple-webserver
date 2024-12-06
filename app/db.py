@@ -10,7 +10,7 @@ client = pymongo.AsyncMongoClient(
 )
 
 db_name = ''
-match os.environ.get('ENV', 'development'):
+match os.environ.get('ENV', 'TEST'):
     case 'TEST':
         db_name = 'reserver_test'
     case _:

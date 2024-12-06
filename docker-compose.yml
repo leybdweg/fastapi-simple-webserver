@@ -16,6 +16,7 @@ services:
       - ./data:/data  # Mount a volume for persistent data if needed
     environment:
       - DEBIAN_FRONTEND=noninteractive
+      - ENV=development
     restart: unless-stopped
 
   mongodb:
