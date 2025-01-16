@@ -1,11 +1,11 @@
 import uuid
-from typing import Dict
+from typing import Dict, Any
 
 from pydantic import BaseModel
 
 
-class ProviderData(BaseModel):
-    quote: any
+# class ProviderData(BaseModel):
+#     quote: any
 
 
 class Stay(BaseModel):
@@ -14,4 +14,4 @@ class Stay(BaseModel):
     from_date: str
     to_date: str
     group_size: int
-    provider_datas: Dict[str, ProviderData] = {}
+    provider_datas: Dict[str, Any] = {}
